@@ -1,219 +1,1478 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adnan Jahangir - Data Analyst Enthusiast</title>
+    <title>Adnan Jahangir</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- SVG Gradient Definitions -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <defs>
+            <linearGradient id="skillGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00f5ff" />
+                <stop offset="100%" stop-color="#64ffda" />
+            </linearGradient>
+            <linearGradient id="skillGradientPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#bf5af2" />
+                <stop offset="100%" stop-color="#00f5ff" />
+            </linearGradient>
+        </defs>
+    </svg>
 
-    <nav class="navbar">
-        <div class="container">
-            <a  class="logo">Adnan-Jahangir</a>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">&lt;adnan jahangir/&gt;</span>
+            </a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="path/to/your/resume.pdf" download class="resume-link">Resume</a></li>
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
-                                                 <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="fade-in">Assalamualaikum, I’m Adnan Jahangir <h1>
-                <h2>Data Analyst Enthusiast</h2>
-                <p class="fade-in">Transforming data into insights with Python, SQL, Power BI & beyond.</p>
-                <div class="cta-buttons fade-in">
-                    <a  class="cta-btn primary">View My Projects</a>
-                    <a  class="cta-btn secondary">Download Resume</a>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#education" class="mobile-nav-link">Education</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+            
+            <!-- Analytical Graph Background -->
+            <div class="analytics-bg">
+                <!-- Line Chart SVG -->
+                <svg class="graph-line graph-1" viewBox="0 0 400 200" preserveAspectRatio="none">
+                    <defs>
+                        <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="rgba(0, 245, 255, 0)" />
+                            <stop offset="50%" stop-color="rgba(0, 245, 255, 0.5)" />
+                            <stop offset="100%" stop-color="rgba(0, 245, 255, 0)" />
+                        </linearGradient>
+                        <linearGradient id="areaGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="rgba(0, 245, 255, 0.2)" />
+                            <stop offset="100%" stop-color="rgba(0, 245, 255, 0)" />
+                        </linearGradient>
+                    </defs>
+                    <path class="graph-area" d="M0,150 Q50,120 100,100 T200,80 T300,60 T400,90 L400,200 L0,200 Z" fill="url(#areaGradient1)" />
+                    <path class="graph-path" d="M0,150 Q50,120 100,100 T200,80 T300,60 T400,90" fill="none" stroke="url(#lineGradient1)" stroke-width="2" />
+                    <circle class="data-point" cx="100" cy="100" r="4" fill="#00f5ff" />
+                    <circle class="data-point" cx="200" cy="80" r="4" fill="#00f5ff" />
+                    <circle class="data-point" cx="300" cy="60" r="4" fill="#00f5ff" />
+                </svg>
+
+                <!-- Bar Chart SVG -->
+                <svg class="graph-bars graph-2" viewBox="0 0 300 150" preserveAspectRatio="none">
+                    <defs>
+                        <linearGradient id="barGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                            <stop offset="0%" stop-color="rgba(191, 90, 242, 0.1)" />
+                            <stop offset="100%" stop-color="rgba(191, 90, 242, 0.4)" />
+                        </linearGradient>
+                    </defs>
+                    <rect class="bar bar-1" x="20" y="90" width="30" height="60" fill="url(#barGradient)" rx="4" />
+                    <rect class="bar bar-2" x="70" y="60" width="30" height="90" fill="url(#barGradient)" rx="4" />
+                    <rect class="bar bar-3" x="120" y="40" width="30" height="110" fill="url(#barGradient)" rx="4" />
+                    <rect class="bar bar-4" x="170" y="70" width="30" height="80" fill="url(#barGradient)" rx="4" />
+                    <rect class="bar bar-5" x="220" y="30" width="30" height="120" fill="url(#barGradient)" rx="4" />
+                </svg>
+
+                <!-- Scatter Plot / Nodes -->
+                <svg class="graph-scatter graph-3" viewBox="0 0 400 300" preserveAspectRatio="none">
+                    <circle class="scatter-point sp-1" cx="50" cy="80" r="3" fill="rgba(100, 255, 218, 0.6)" />
+                    <circle class="scatter-point sp-2" cx="120" cy="150" r="4" fill="rgba(100, 255, 218, 0.4)" />
+                    <circle class="scatter-point sp-3" cx="180" cy="100" r="3" fill="rgba(100, 255, 218, 0.5)" />
+                    <circle class="scatter-point sp-4" cx="250" cy="200" r="5" fill="rgba(100, 255, 218, 0.3)" />
+                    <circle class="scatter-point sp-5" cx="320" cy="120" r="3" fill="rgba(100, 255, 218, 0.6)" />
+                    <circle class="scatter-point sp-6" cx="380" cy="180" r="4" fill="rgba(100, 255, 218, 0.4)" />
+                    <line class="connect-line" x1="50" y1="80" x2="120" y2="150" stroke="rgba(100, 255, 218, 0.2)" stroke-width="1" />
+                    <line class="connect-line" x1="120" y1="150" x2="180" y2="100" stroke="rgba(100, 255, 218, 0.2)" stroke-width="1" />
+                    <line class="connect-line" x1="180" y1="100" x2="250" y2="200" stroke="rgba(100, 255, 218, 0.2)" stroke-width="1" />
+                    <line class="connect-line" x1="250" y1="200" x2="320" y2="120" stroke="rgba(100, 255, 218, 0.2)" stroke-width="1" />
+                    <line class="connect-line" x1="320" y1="120" x2="380" y2="180" stroke="rgba(100, 255, 218, 0.2)" stroke-width="1" />
+                </svg>
+
+                <!-- Pie Chart -->
+                <svg class="graph-pie graph-4" viewBox="0 0 100 100">
+                    <circle class="pie-bg" cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="20" />
+                    <circle class="pie-segment pie-1" cx="50" cy="50" r="40" fill="none" stroke="rgba(0, 245, 255, 0.3)" stroke-width="20" stroke-dasharray="75 251" stroke-dashoffset="0" transform="rotate(-90 50 50)" />
+                    <circle class="pie-segment pie-2" cx="50" cy="50" r="40" fill="none" stroke="rgba(191, 90, 242, 0.3)" stroke-width="20" stroke-dasharray="50 251" stroke-dashoffset="-75" transform="rotate(-90 50 50)" />
+                    <circle class="pie-segment pie-3" cx="50" cy="50" r="40" fill="none" stroke="rgba(100, 255, 218, 0.3)" stroke-width="20" stroke-dasharray="126 251" stroke-dashoffset="-125" transform="rotate(-90 50 50)" />
+                </svg>
+
+                <!-- Candlestick / Stock Chart -->
+                <svg class="graph-candle graph-5" viewBox="0 0 250 150">
+                    <line class="candle-wick" x1="30" y1="20" x2="30" y2="130" stroke="rgba(0, 245, 255, 0.2)" stroke-width="1" />
+                    <rect class="candle-body green" x="22" y="50" width="16" height="40" fill="rgba(100, 255, 218, 0.3)" rx="2" />
+                    <line class="candle-wick" x1="70" y1="30" x2="70" y2="120" stroke="rgba(191, 90, 242, 0.2)" stroke-width="1" />
+                    <rect class="candle-body red" x="62" y="40" width="16" height="50" fill="rgba(191, 90, 242, 0.3)" rx="2" />
+                    <line class="candle-wick" x1="110" y1="10" x2="110" y2="100" stroke="rgba(0, 245, 255, 0.2)" stroke-width="1" />
+                    <rect class="candle-body green" x="102" y="30" width="16" height="35" fill="rgba(100, 255, 218, 0.3)" rx="2" />
+                    <line class="candle-wick" x1="150" y1="25" x2="150" y2="135" stroke="rgba(0, 245, 255, 0.2)" stroke-width="1" />
+                    <rect class="candle-body green" x="142" y="45" width="16" height="55" fill="rgba(100, 255, 218, 0.3)" rx="2" />
+                    <line class="candle-wick" x1="190" y1="15" x2="190" y2="110" stroke="rgba(191, 90, 242, 0.2)" stroke-width="1" />
+                    <rect class="candle-body red" x="182" y="35" width="16" height="45" fill="rgba(191, 90, 242, 0.3)" rx="2" />
+                </svg>
+
+                <!-- Floating Data Numbers -->
+                <div class="floating-data">
+                    <span class="data-num num-1">+24.5%</span>
+                    <span class="data-num num-2">$1.2M</span>
+                    <span class="data-num num-3">98.7%</span>
+                    <span class="data-num num-4">▲ 156</span>
+                    <span class="data-num num-5">3.14π</span>
                 </div>
             </div>
-            <div class="hero-image fade-in">
-                <img src="./resourse/logo - Copy.png" alt="Adnan Jahangir" class="profile-photo">
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <span class="badge-dot"></span>
+                <span>Available for opportunities</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="greeting">Assalamualaikum, I'm</span>
+                <span class="name">Adnan Jahangir</span>
+                <span class="typewriter-line">
+                    <span class="typewriter-text" id="typewriter"></span>
+                    <span class="cursor">|</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in-delay">
+                Computer Science & Engineering Student<br>
+                <span class="highlight">Specializing in Data Analytics</span>
+            </p>
+            <p class="hero-description animate-fade-in-delay-2">
+                Transforming raw data into actionable insights. Passionate about 
+                machine learning, statistical analysis, and building data-driven solutions.
+            </p>
+            <div class="hero-cta animate-fade-in-delay-3">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://drive.google.com/file/d/1MmfbS7kMTKWwqG0DtNNijf4XrmzXWoIe/view?usp=drive_link" class="btn btn-secondary" target="_blank">
+                    <span>Show Resume</span>
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+            </div>
+            <!-- <div class="hero-stats animate-fade-in-delay-3">
+                <div class="stat">
+                    <span class="stat-number" data-count="15">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-label">Years Learning</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="10">0</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+            </div> -->
+        </div>
+        <!-- <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div> -->
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get to know me</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image-wrapper animate-on-scroll">
+                    <div class="about-image-container">
+                        <div class="about-image">
+                            <img src="img/profile.jpeg" alt="Adnan Jahangir">
+                        </div>
+                        <div class="image-decoration"></div>
+                        <div class="image-dots"></div>
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Data Analyst</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-code"></i>
+                        <span>Developer</span>
+                    </div>
+                </div>
+                <div class="about-text animate-on-scroll">
+                    <h3>Turning Data into Decisions</h3>
+                    <p>
+                       I’m a Computer Science and Engineering student with a strong interest in data analytics and practical problem solving. Alongside my university studies, I’m actively building skills in Excel, SQL, Power BI, and Python through hands-on projects and structured coursework.
+                    </p>
+                    <p>
+                        What started as curiosity about how platforms use data to guide decisions has grown into a serious commitment to learning how to turn raw data into clear insights. I enjoy working on academic and personal projects that challenge me to think analytically and apply real-world data techniques, and I’m focused on steadily developing the skills needed for a career in data analytics.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-database"></i>
+                            <span>Big Data Processing</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Data Visualization</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-robot"></i>
+                            <span>AI Integration</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Let's Connect</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-                             <!-- About Section -->
-    <section id="about">
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content glass-card fade-in">
-                <p>I'm Adnan Jahangir, a passionate Computer Science and Engineering student with a deep interest in data analytics. I am on a journey to become a skilled Data Analyst, using my knowledge in Python, SQL, and other powerful tools to uncover hidden patterns and drive data-informed decisions. I have hands-on experience with technologies like C, C++, Java, and data-specific libraries such as Pandas, NumPy, and Matplotlib. My goal is to leverage data to solve real-world problems and create meaningful impact.</p>
-                <div class="education-timeline">
-                    <h3>My Journey</h3>
-                    <div class="timeline-item">
-                        <span class="timeline-dot"></span>
-                        <div class="timeline-content">
-                            <h4>B.Sc. in Computer Science and Engineering</h4>
-                            <p>IIUC | 2023 – Present</p>
+            <div class="section-header">
+                <span class="section-tag">What I know</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+            </div>
+
+            <!-- Skills Tabs -->
+            <div class="skills-tabs">
+                <button class="skill-tab active" data-tab="languages">
+                    <i class="fas fa-code"></i>
+                    <span>Languages</span>
+                </button>
+                <button class="skill-tab" data-tab="datascience">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Analytical Tools</span>
+                </button>
+                <button class="skill-tab" data-tab="tools">
+                    <i class="fas fa-tools"></i>
+                    <span>Tools</span>
+                </button>
+                <button class="skill-tab" data-tab="soft">
+                    <i class="fas fa-users"></i>
+                    <span>Soft Skills</span>
+                </button>
+            </div>
+
+            <!-- Skills Content Panels -->
+            <div class="skills-content">
+                
+                <!-- Programming Languages Panel -->
+                <div class="skills-panel active" id="languages">
+                    <div class="circular-skills">
+                        <div class="circular-skill animate-on-scroll" data-progress="75">
+                            <div class="circular-progress">
+                                <svg class="progress-ring" viewBox="0 0 120 120">
+                                    <circle class="progress-ring-bg" cx="60" cy="60" r="54" />
+                                    <circle class="progress-ring-fill python" cx="60" cy="60" r="54" />
+                                </svg>
+                                <div class="skill-icon python">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <h4>Python</h4>
+                                <span class="skill-level python">Intermediate</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-tooltip">
+                                <p>1+ years experience</p>
+                                <ul>
+                                    <li>Data Analysis</li>
+                                    <li>Machine Learning</li>
+                                    <li>Automation</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-dot"></span>
-                        <div class="timeline-content">
-                            <h4>HSC</h4>
-                            <p>Baroiahat College | 2020 – 2022 | GPA: 4.76</p>
+
+                        <div class="circular-skill animate-on-scroll" data-progress="90">
+                            <div class="circular-progress">
+                                <svg class="progress-ring" viewBox="0 0 120 120">
+                                    <circle class="progress-ring-bg" cx="60" cy="60" r="54" />
+                                    <circle class="progress-ring-fill sql" cx="60" cy="60" r="54" />
+                                </svg>
+                                <div class="skill-icon sql">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <h4>SQL</h4>
+                                <span class="skill-level sql">Expert</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-tooltip">
+                                <p>Advanced queries</p>
+                                <ul>
+                                    <li>PostgreSQL</li>
+                                    <li>MySQL</li>
+                                    <li>Data Modeling</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="circular-skill animate-on-scroll" data-progress="75">
+                            <div class="circular-progress">
+                                <svg class="progress-ring" viewBox="0 0 120 120">
+                                    <circle class="progress-ring-bg" cx="60" cy="60" r="54" />
+                                    <circle class="progress-ring-fill javascript" cx="60" cy="60" r="54" />
+                                </svg>
+                                <div class="skill-icon javascript">
+                                    <i class="fab fa-js-square"></i>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <h4>JavaScript</h4>
+                                <span class="skill-level javascript">Intermediate</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-tooltip">
+                                <p>Web Development</p>
+                                <ul>
+                                    <li>D3.js</li>
+                                    <li>React</li>
+                                    <li>Node.js</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="circular-skill animate-on-scroll" data-progress="70">
+                            <div class="circular-progress">
+                                <svg class="progress-ring" viewBox="0 0 120 120">
+                                    <circle class="progress-ring-bg" cx="60" cy="60" r="54" />
+                                    <circle class="progress-ring-fill cpp" cx="60" cy="60" r="54" />
+                                </svg>
+                                <div class="skill-icon cpp">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <h4>C++</h4>
+                                <span class="skill-level cpp">Intermediate</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-tooltip">
+                                <p>Systems Programming</p>
+                                <ul>
+                                    <li>OOP Concepts</li>
+                                    <li>Data Structures</li>
+                                    <li>Algorithms</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="circular-skill animate-on-scroll" data-progress="85">
+                            <div class="circular-progress">
+                                <svg class="progress-ring" viewBox="0 0 120 120">
+                                    <circle class="progress-ring-bg" cx="60" cy="60" r="54" />
+                                    <circle class="progress-ring-fill html" cx="60" cy="60" r="54" />
+                                </svg>
+                                <div class="skill-icon html">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <h4>HTML</h4>
+                                <span class="skill-level html">Advanced</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-tooltip">
+                                <p>Web Structure</p>
+                                <ul>
+                                    <li>Semantic HTML</li>
+                                    <li>Accessibility</li>
+                                    <li>SEO Best Practices</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="circular-skill animate-on-scroll" data-progress="80">
+                            <div class="circular-progress">
+                                <svg class="progress-ring" viewBox="0 0 120 120">
+                                    <circle class="progress-ring-bg" cx="60" cy="60" r="54" />
+                                    <circle class="progress-ring-fill css" cx="60" cy="60" r="54" />
+                                </svg>
+                                <div class="skill-icon css">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <h4>CSS</h4>
+                                <span class="skill-level css">Advanced</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-tooltip">
+                                <p>Web Styling</p>
+                                <ul>
+                                    <li>Flexbox & Grid</li>
+                                    <li>Animations</li>
+                                    <li>Responsive Design</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Analytical Tools Panel -->
+                <div class="skills-panel" id="datascience">
+                    <div class="circular-skills">
+                        <div class="circular-skill animate-on-scroll" data-progress="75">
+                            <div class="circular-progress">
+                                <svg class="progress-ring" viewBox="0 0 120 120">
+                                    <circle class="progress-ring-bg" cx="60" cy="60" r="54" />
+                                    <circle class="progress-ring-fill pandas" cx="60" cy="60" r="54" />
+                                </svg>
+                                <div class="skill-icon pandas">
+                                    <i class="fas fa-table"></i>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <h4>Pandas & NumPy</h4>
+                                <span class="skill-level pandas">Intermediate</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-tooltip">
+                                <p>Data Manipulation</p>
+                                <ul>
+                                    <li>Data Cleaning</li>
+                                    <li>Feature Engineering</li>
+                                    <li>Analysis</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="circular-skill animate-on-scroll" data-progress="88">
+                            <div class="circular-progress">
+                                <svg class="progress-ring" viewBox="0 0 120 120">
+                                    <circle class="progress-ring-bg" cx="60" cy="60" r="54" />
+                                    <circle class="progress-ring-fill sklearn" cx="60" cy="60" r="54" />
+                                </svg>
+                                <div class="skill-icon sklearn">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <h4>Scikit-Learn</h4>
+                                <span class="skill-level sklearn">Advanced</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-tooltip">
+                                <p>Machine Learning</p>
+                                <ul>
+                                    <li>Classification</li>
+                                    <li>Regression</li>
+                                    <li>Clustering</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="circular-skill animate-on-scroll" data-progress="90">
+                            <div class="circular-progress">
+                                <svg class="progress-ring" viewBox="0 0 120 120">
+                                    <circle class="progress-ring-bg" cx="60" cy="60" r="54" />
+                                    <circle class="progress-ring-fill excel" cx="60" cy="60" r="54" />
+                                </svg>
+                                <div class="skill-icon excel">
+                                    <i class="fas fa-file-excel"></i>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <h4>Excel</h4>
+                                <span class="skill-level excel">Expert</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-tooltip">
+                                <p>Data Analysis</p>
+                                <ul>
+                                    <li>Pivot Tables</li>
+                                    <li>Power Query</li>
+                                    <li>Advanced Formulas</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="circular-skill animate-on-scroll" data-progress="85">
+                            <div class="circular-progress">
+                                <svg class="progress-ring" viewBox="0 0 120 120">
+                                    <circle class="progress-ring-bg" cx="60" cy="60" r="54" />
+                                    <circle class="progress-ring-fill powerbi" cx="60" cy="60" r="54" />
+                                </svg>
+                                <div class="skill-icon powerbi">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="skill-details">
+                                <h4>Power BI / Tableau</h4>
+                                <span class="skill-level powerbi">Advanced</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-tooltip">
+                                <p>Data Visualization</p>
+                                <ul>
+                                    <li>Dashboards</li>
+                                    <li>Reports</li>
+                                    <li>KPI Tracking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools Panel -->
+                <div class="skills-panel" id="tools">
+                    <div class="tools-grid">
+                        <div class="tool-card animate-on-scroll git">
+                            <div class="tool-icon git">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <h4>Git</h4>
+                            <div class="tool-level">
+                                <span class="level-dot git active"></span>
+                                <span class="level-dot git active"></span>
+                                <span class="level-dot git active"></span>
+                                <span class="level-dot git active"></span>
+                                <span class="level-dot git"></span>
+                            </div>
+                        </div>
+                        <div class="tool-card animate-on-scroll docker">
+                            <div class="tool-icon docker">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <h4>Docker</h4>
+                            <div class="tool-level">
+                                <span class="level-dot docker active"></span>
+                                <span class="level-dot docker active"></span>
+                                <span class="level-dot docker active"></span>
+                                <span class="level-dot docker"></span>
+                                <span class="level-dot docker"></span>
+                            </div>
+                        </div>
+                        <div class="tool-card animate-on-scroll aws">
+                            <div class="tool-icon aws">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <h4>AWS</h4>
+                            <div class="tool-level">
+                                <span class="level-dot aws active"></span>
+                                <span class="level-dot aws active"></span>
+                                <span class="level-dot aws active"></span>
+                                <span class="level-dot aws active"></span>
+                                <span class="level-dot aws"></span>
+                            </div>
+                        </div>
+                        <div class="tool-card animate-on-scroll mongodb">
+                            <div class="tool-icon mongodb">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4>MongoDB</h4>
+                            <div class="tool-level">
+                                <span class="level-dot mongodb active"></span>
+                                <span class="level-dot mongodb active"></span>
+                                <span class="level-dot mongodb active"></span>
+                                <span class="level-dot mongodb"></span>
+                                <span class="level-dot mongodb"></span>
+                            </div>
+                        </div>
+                        <div class="tool-card animate-on-scroll postgresql">
+                            <div class="tool-icon postgresql">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>PostgreSQL</h4>
+                            <div class="tool-level">
+                                <span class="level-dot postgresql active"></span>
+                                <span class="level-dot postgresql active"></span>
+                                <span class="level-dot postgresql active"></span>
+                                <span class="level-dot postgresql "></span>
+                                <span class="level-dot postgresql "></span>
+                            </div>
+                        </div>
+                        <div class="tool-card animate-on-scroll jupyter">
+                            <div class="tool-icon jupyter">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h4>Jupyter</h4>
+                            <div class="tool-level">
+                                <span class="level-dot jupyter active"></span>
+                                <span class="level-dot jupyter active"></span>
+                                <span class="level-dot jupyter active"></span>
+                                <span class="level-dot jupyter "></span>
+                                <span class="level-dot jupyter "></span>
+                            </div>
+                        </div>
+                        <!-- <div class="tool-card animate-on-scroll spark">
+                            <div class="tool-icon spark">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h4>Apache Spark</h4>
+                            <div class="tool-level">
+                                <span class="level-dot spark active"></span>
+                                <span class="level-dot spark active"></span>
+                                <span class="level-dot spark active"></span>
+                                <span class="level-dot spark"></span>
+                                <span class="level-dot spark"></span>
+                            </div>
+                        </div> -->
+                        <!-- <div class="tool-card animate-on-scroll hadoop">
+                            <div class="tool-icon hadoop">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h4>Hadoop</h4>
+                            <div class="tool-level">
+                                <span class="level-dot hadoop active"></span>
+                                <span class="level-dot hadoop active"></span>
+                                <span class="level-dot hadoop active"></span>
+                                <span class="level-dot hadoop"></span>
+                                <span class="level-dot hadoop"></span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Soft Skills Panel -->
+                <div class="skills-panel" id="soft">
+                    <div class="soft-skills-grid">
+                        <div class="soft-skill-card animate-on-scroll">
+                            <div class="soft-skill-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4>Problem Solving</h4>
+                            <p>Breaking down complex problems into manageable solutions</p>
+                            <div class="skill-meter">
+                                <div class="meter-fill" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="soft-skill-card animate-on-scroll">
+                            <div class="soft-skill-icon">
+                                <i class="fas fa-chess"></i>
+                            </div>
+                            <h4>Critical Thinking</h4>
+                            <p>Analyzing data objectively to make informed decisions</p>
+                            <div class="skill-meter">
+                                <div class="meter-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="soft-skill-card animate-on-scroll">
+                            <div class="soft-skill-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4>Team Collaboration</h4>
+                            <p>Working effectively in cross-functional teams</p>
+                            <div class="skill-meter">
+                                <div class="meter-fill" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="soft-skill-card animate-on-scroll">
+                            <div class="soft-skill-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>Communication</h4>
+                            <p>Translating technical insights for all audiences</p>
+                            <div class="skill-meter">
+                                <div class="meter-fill" data-width="92"></div>
+                            </div>
+                        </div>
+                        <div class="soft-skill-card animate-on-scroll">
+                            <div class="soft-skill-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4>Time Management</h4>
+                            <p>Prioritizing tasks and meeting deadlines efficiently</p>
+                            <div class="skill-meter">
+                                <div class="meter-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="soft-skill-card animate-on-scroll">
+                            <div class="soft-skill-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <h4>Adaptability</h4>
+                            <p>Quickly learning new technologies and methodologies</p>
+                            <div class="skill-meter">
+                                <div class="meter-fill" data-width="94"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="skills">
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
         <div class="container">
-            <h2 class="section-title">Skills & Tools</h2>
-            <div class="skills-grid">
-                <div class="skill-card glass-card fade-in">
-                    <h3>Core Skills</h3>
-                    <ul>
-                        <li><i class="fas fa-database"></i> Python</li>
-                        <li><i class="fas fa-code"></i> SQL</li>
-                        <li><i class="fas fa-chart-bar"></i> Power BI</li>
-                    </ul>
-                </div>
-                <div class="skill-card glass-card fade-in">
-                    <h3>Programming</h3>
-                    <ul>
-                        <li><i class="fab fa-python"></i> Python</li>
-                        <li><i class="fa-solid fa-c"></i> C, C++</li>
-                        <li><i class="fab fa-java"></i> Java</li>
-                    </ul>
-                </div>
-                <div class="skill-card glass-card fade-in">
-                    <h3>Data Visualization</h3>
-                    <ul>
-                        <li><i class="fas fa-chart-line"></i> Power BI</li>
-                        <li><i class="fas fa-file-excel"></i> Excel</li>
-                        <li><i class="fas fa-chart-pie"></i> Matplotlib</li>
-                    </ul>
-                </div>
-                <div class="skill-card glass-card fade-in">
-                    <h3>Data Handling</h3>
-                    <ul>
-                        <li><i class="fas fa-table"></i> Pandas</li>
-                        <li><i class="fas fa-calculator"></i> NumPy</li>
-                        <li><i class="fas fa-file-excel"></i> Excel</li>
-                    </ul>
-                </div>
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
             </div>
-        </div>
-    </section>
-    
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
+            
+            <!-- Project Filter Tabs -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th-large"></i>
+                    <span>All Projects</span>
+                </button>
+                <button class="filter-btn" data-filter="python">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </button>
+                  <button class="filter-btn" data-filter="sql">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                </button> 
+
+                <button class="filter-btn" data-filter="excel">
+                    <i class="fas fa-file-excel"></i>
+                    <span>Excel</span>
+                </button>
+                <button class="filter-btn" data-filter="powerbi">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Power BI</span>
+                </button>
+                <button class="filter-btn" data-filter="javascript">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
+                </button>
+            </div>
+
             <div class="projects-grid">
-                <!-- project 1 -->
-     <div class="project-card glass-card fade-in">
-    <img src="./resourse/Hospitality Management Dashboard.png" alt="Hotel Management Dashboard">
-    <div class="project-info">
-        <h3>Hotel Management Dashboard</h3>
-        <p class="project-desc">
-            <strong>Problem:</strong> Needed a dynamic dashboard to manage and analyze hotel booking data effectively.<br>
-            <strong>Approach:</strong> Built in Excel using formulas, pivot tables, and interactive charts to track bookings, revenue, and KPIs.<br>
-            <strong>Result:</strong> Delivered a real-time Excel dashboard that provides insights into bookings and hotel performance for informed management decisions.
-        </p>
-        <div class="project-links">
-            <a href="https://github.com/adnan-jahangir/Hospitality-Management-" class="project-link-btn" target="_blank">
-                <i class="fab fa-github"></i> GitHub
+                <!-- Project 1 - Python
+                <div class="project-card animate-on-scroll" data-category="python sql">
+                    <div class="project-language-badge">
+                        <i class="fab fa-python"></i> Python
+                    </div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Customer Analytics Dashboard">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Tableau</span>
+                            <span>SQL</span>
+                        </div>
+                        <h3 class="project-title">Customer Analytics Dashboard</h3>
+                        <p class="project-description">
+                            Built an interactive dashboard analyzing customer behavior patterns, 
+                            resulting in 25% improvement in retention strategies.
+                        </p>
+                        <a href="#" class="project-btn">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- Project 2 - Python
+                <div class="project-card animate-on-scroll" data-category="python">
+                    <div class="project-language-badge">
+                        <i class="fab fa-python"></i> Python
+                    </div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&h=400&fit=crop" alt="Predictive Stock Analysis">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>LSTM</span>
+                            <span>Keras</span>
+                        </div>
+                        <h3 class="project-title">Predictive Stock Analysis</h3>
+                        <p class="project-description">
+                            Developed an LSTM neural network model for stock price prediction 
+                            with 87% accuracy on historical data.
+                        </p>
+                        <a href="#" class="project-btn">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- Project 3 - Python
+                <div class="project-card animate-on-scroll" data-category="python">
+                    <div class="project-language-badge">
+                        <i class="fab fa-python"></i> Python
+                    </div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop" alt="Sentiment Analysis Tool">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>NLP</span>
+                            <span>Python</span>
+                            <span>BERT</span>
+                        </div>
+                        <h3 class="project-title">Sentiment Analysis Tool</h3>
+                        <p class="project-description">
+                            Created a real-time sentiment analysis tool for social media 
+                            monitoring using BERT transformers.
+                        </p>
+                        <a href="#" class="project-btn">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- Project 4 - Python -->
+                <!-- <div class="project-card animate-on-scroll" data-category="python">
+                    <div class="project-language-badge">
+                        <i class="fab fa-python"></i> Python
+                    </div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Sales Forecasting System">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Time Series</span>
+                            <span>Prophet</span>
+                            <span>Python</span>
+                        </div>
+                        <h3 class="project-title">Sales Forecasting System</h3>
+                        <p class="project-description">
+                            Implemented a time-series forecasting model using Facebook Prophet 
+                            for retail sales prediction.
+                        </p>
+                        <a href="#" class="project-btn">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- Project 5 - Excel -->
+                <div class="project-card animate-on-scroll" data-category="excel">
+                    <div class="project-language-badge excel-badge">
+                        <i class="fas fa-file-excel"></i> Excel
+                    </div>
+                    <div class="project-image">
+                        <img src="img/Hotel Management .png" alt="Hotel Management Dashboard">
+                        <div class="project-overlay">
+                            <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fadnan-jahangir%2FHospitality-Management-%2Frefs%2Fheads%2Fmain%2FHotel%2520Management%2520Booking.xlsx&wdOrigin=BROWSELINK" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/adnan-jahangir/Hospitality-Management-.git" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Excel</span>
+                            <span>Power Query</span>
+                            <span>Pivot Tables</span>
+                        </div>
+<h3 class="project-title">Hotel Management Dashboard</h3>
+<p class="project-description">
+    Developed an Excel-based hotel management dashboard to track bookings,
+    occupancy, revenue, and customer records using Power Query and Pivot Tables.
+</p>
+
+                        <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fadnan-jahangir%2FHospitality-Management-%2Frefs%2Fheads%2Fmain%2FHotel%2520Management%2520Booking.xlsx&wdOrigin=BROWSELINK" class="project-btn" target="_blank" rel="noopener noreferrer">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 9 - Excel -->
+<div class="project-card animate-on-scroll" data-category="excel">
+    <!-- Language Badge -->
+    <div class="project-language-badge excel-badge">
+        <i class="fas fa-file-excel"></i> Excel
+    </div>
+
+    <!-- Project Image -->
+    <div class="project-image">
+        <img src="img/Dengue.png" alt="Dengue Surveillance Dashboard – Dhaka Region">
+        <div class="project-overlay">
+            <a href="https://1drv.ms/x/c/e1788fee3da94d1d/IQAKUVJWaVXVT6zTYCWxu6WoASGtL21x0LrWCRX4ruzJpfM?e=XB0CQs" 
+               target="_blank" 
+               class="project-link" 
+               title="Open in Excel Online">
+                <i class="fas fa-external-link-alt"></i>
             </a>
-            <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fadnan-jahangir%2FHospitality-Management-%2Frefs%2Fheads%2Fmain%2FHotel%2520Management%2520Booking.xlsx&wdOrigin=BROWSELINK" class="project-link-btn" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Live Demo
+            <a href="https://github.com/adnan-jahangir/Dengue-Surveillance-Dashboard-in-Dhaka-Region.git" 
+               target="_blank" 
+               class="project-link" 
+               title="View on GitHub">
+                <i class="fab fa-github"></i>
             </a>
         </div>
     </div>
+    <!-- Project Content -->
+    <div class="project-content">
+        <!-- Tags -->
+        <div class="project-tags">
+            <span>Excel</span>
+            <span>Power Query</span>
+            <span>Dashboard</span>
+        </div>
+
+        <!-- Title & Description -->
+        <h3 class="project-title">Dengue Surveillance Dashboard – Dhaka Region</h3>
+        <p class="project-description">
+            An Excel dashboard for monitoring and analyzing dengue cases across Dhaka. 
+            Quickly identify hotspots, trends, and demographic breakdowns using charts, slicers, and pivot tables.
+        </p>
+
+        <!-- Action Button -->
+        <a href="https://1drv.ms/x/c/e1788fee3da94d1d/IQAKUVJWaVXVT6zTYCWxu6WoASGtL21x0LrWCRX4ruzJpfM?e=XB0CQs" class="project-btn">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+    </div>
 </div>
-      <!-- project 2 -->
 
-                <div class="project-card glass-card fade-in">
-                    <img src="./resourse/Dengue Surveillance Dashboard copy.png" alt="Project 2">
-                    <div class="project-info">
-                        <h3>Dengue Surveillance Dashboard</h3>
-                        <p class="project-desc">
-                       <strong>Problem:</strong> Needed an interactive dashboard to track and analyze dengue cases effectively.<br>
-                      <strong>Approach:</strong> Collected and cleaned data in Excel, used formulas and pivot tables to transform data, and created interactive charts and visuals.<br>
-                  <strong>Result:</strong> Delivered a real-time Excel dashboard that highlights trends and hotspots, supporting timely and informed public health decisions.
-                               </p>
-                        <div class="project-links">
-                            <a href="https://github.com/adnan-jahangir/Dengue-Surveillance-Dashboard-in-Dhaka-Region" class="project-link-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fadnan-jahangir%2FDengue-Surveillance-Dashboard-in-Dhaka-Region%2Frefs%2Fheads%2Fmain%2FDengue%2520Surveillance%2520Dashboard.xlsx&wdOrigin=BROWSELINK" class="project-link-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <!-- Project 6 - SQL -->
+                <div class="project-card animate-on-scroll" data-category="sql">
+    <div class="project-language-badge sql-badge">
+        <i class="fas fa-database"></i> SQL
+    </div>
+
+    <div class="project-image">
+        <img src="img/image.png" alt="Hospital Mortality Prediction">
+        <div class="project-overlay">
+            <a href="https://private-user-images.githubusercontent.com/140138270/489303620-f823790f-4882-49dc-a462-84ef4b0da4e8.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njk5NjI1MTQsIm5iZiI6MTc2OTk2MjIxNCwicGF0aCI6Ii8xNDAxMzgyNzAvNDg5MzAzNjIwLWY4MjM3OTBmLTQ4ODItNDlkYy1hNDYyLTg0ZWY0YjBkYTRlOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMjAxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDIwMVQxNjEwMTRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wMDg5NWIyOTVmMjRlOTVjZGQ2ZWRlNGUxYTNhNjI5MDFiZDA3MjAxYWZkYmIyY2I4ZWQ3MjMyODRlNTVjNDBjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.yr98q6Pk0jZlI-Y9v2PfvkH60bJBGmn2l9DrqWK6NFA" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://github.com/adnan-jahangir/Hospital-Mortality-Prediction-SQL.git" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="project-content">
+        <div class="project-tags">
+            <span>SQL</span>
+            <span>Tableau</span>
+        </div>
+
+        <h3 class="project-title">Hospital Mortality Prediction</h3>
+
+        <p class="project-description">
+            Analyzed hospital patient data using SQL to identify mortality patterns.
+            Built structured queries and dashboards to support data-driven healthcare insights.
+        </p>
+
+        <a href="https://github.com/adnan-jahangir/Hospital-Mortality-Prediction-SQL.git" class="project-btn" target="_blank" rel="noopener noreferrer">
+            <span>View Project</span>
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+               <!-- Project 7 - JavaScript -->
+<div class="project-card animate-on-scroll" data-category="javascript">
+    <div class="project-language-badge js-badge">
+        <i class="fab fa-js-square"></i> JavaScript
+    </div>
+
+    <div class="project-image">
+        <img src="img/image copy.png" alt="Mid Web Project">
+        <div class="project-overlay">
+            <a href="https://adnan-jahangir.github.io/mid-project/" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://github.com/adnan-jahangir/mid-project" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="project-content">
+        <div class="project-tags">
+            <span>JavaScript</span>
+            <span>Tailwind CSS</span>
+            <span>HTML</span>
+        </div>
+
+        <h3 class="project-title">Interactive Web Dashboard</h3>
+
+        <p class="project-description">
+            A responsive interactive website built with JavaScript and Tailwind CSS.
+            Focused on clean UI, dynamic user interaction, and smooth front-end behavior.
+        </p>
+
+        <a href="https://adnan-jahangir.github.io/mid-project/" class="project-btn" target="_blank" rel="noopener noreferrer">
+            <span>View Project</span>
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Project 8 - JavaScript -->
+<div class="project-card animate-on-scroll" data-category="javascript">
+    <div class="project-language-badge js-badge">
+        <i class="fab fa-js-square"></i> JavaScript
+    </div>
+
+    <div class="project-image">
+        <img src="img/web.png" alt="Mid Web Project">
+        <div class="project-overlay">
+            <a href="https://github.com/adnan-jahangir/FInal-Project" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://github.com/adnan-jahangir/FInal-Project" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="project-content">
+        <div class="project-tags">
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Tailwind CSS</span>
+            <span>HTML</span>
+        </div>
+
+        <h3 class="project-title">FreshCart E-commerce Website</h3>
+
+        <p class="project-description">
+         This is an E-Commerce website built using React & Vite. The project features user authentication and authorization, search functionality, product details pages, shopping cart and checkout functionality, and a wishlist feature.
+        </p>
+
+        <a href="https://github.com/adnan-jahangir/FInal-Project" class="project-btn" target="_blank" rel="noopener noreferrer">
+            <span>View Project</span>
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Project 9 - JavaScript -->
+<div class="project-card animate-on-scroll" data-category="javascript">
+    <div class="project-language-badge java-badge">
+        <i class="fab fa-java"></i>JavaScript
+    </div>
+
+    <div class="project-image">
+        <img src="img/image copy 2.png" alt="Airline Management System">
+        <div class="project-overlay">
+            <a href="https://github.com/adnan-jahangir/Airline-Management-System-" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://github.com/adnan-jahangir/Airline-Management-System-" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="project-content">
+        <div class="project-tags">
+            <span>Java</span>
+            <span>OOP</span>
+            <span>Database</span>
+            <span>SQL</span>
+            <span>Desktop App</span>
+        </div>
+
+        <h3 class="project-title">Airline Management System</h3>
+
+        <p class="project-description">
+            A Java-based airline management system for handling passenger records,
+            ticket booking, and flight operations using object-oriented design.
+        </p>
+
+        <a href="https://github.com/adnan-jahangir/Airline-Management-System-" class="project-btn" target="_blank" rel="noopener noreferrer">
+            <span>View Project</span>
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+
+                <!-- Project 9 - Power BI -->
+                <!-- <div class="project-card animate-on-scroll" data-category="powerbi">
+                    <div class="project-language-badge powerbi-badge">
+                        <i class="fas fa-chart-bar"></i> Power BI
+                    </div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Business Intelligence Dashboard">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
-
-                 <!-- project 3 -->
-             <div class="project-card glass-card fade-in">
-                    <img src="./resourse/airline.jpg" alt="Project 3">
-                    <div class="project-info">
-                        <h3>Airline Management System</h3>
-                        <p class="project-desc">
-                      <p class="project-desc">
-                           <strong>Problem:</strong> Needed a system to manage airline bookings, flights, and passenger information efficiently.<br>
-                           <strong>Approach:</strong> Developed in Java with object-oriented programming, dynamic pricing, and discount logic based on passenger data. Implemented data storage and retrieval for flights, passengers, and payments.<br>
-                           <strong>Result:</strong> Delivered a functional airline management system that automates bookings, calculates fares dynamically, and provides smooth management of flights and passenger records.
-                                </p>
-
-                        <div class="project-links">
-                            <a href="https://github.com/adnan-jahangir/Airline-Management-System-" class="project-link-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://github.com/adnan-jahangir/Airline-Management-System-" class="project-link-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Power BI</span>
+                            <span>DAX</span>
+                            <span>Data Modeling</span>
                         </div>
+                        <h3 class="project-title">Business Intelligence Dashboard</h3>
+                        <p class="project-description">
+                            Created interactive Power BI dashboards with DAX measures 
+                            for sales analytics and business performance tracking.
+                        </p>
+                        <a href="#" class="project-btn">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-                </div>
-               
-                <!-- project 4 -->
-                 
-                    <div class="project-card glass-card fade-in">
-                    <img src="./resourse/Hospital Mortality Dashboard (Tableau).png" alt="Project 2">
-                    <div class="project-info">
-                        <h3>Hospital Mortality Dashboard Using -SQL</h3>
-                        <p class="project-desc">
-                          <strong>Problem:</strong> Needed an interactive dashboard to monitor and analyze hospital mortality data effectively.<br>
-                         <strong>Approach:</strong> Collected and cleaned data from hospital databases using SQL queries, performed aggregation and analysis, and created an interactive dashboard with Excel/visualization tools.<br>
-                     <strong>Result:</strong> Delivered a real-time dashboard that provides insights into mortality trends, helping hospital management make data-driven decisions and improve patient care.
-                       </p>
-                        <div class="project-links">
-                            <a href="https://github.com/adnan-jahangir/Hospital-Mortality-Prediction-SQL" class="project-link-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://github.com/adnan-jahangir/Hospital-Mortality-Prediction-SQL" class="project-link-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
 
+                
+                
+            </div>
 
-            
-        
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults">
+                <i class="fas fa-search"></i>
+                <p>No projects found for this category.</p>
+            </div>
+        </div>
     </section>
-        <!-- Contact Section -->
-    <section id="contact">
+
+    <!-- Education Section -->
+    <section class="education section" id="education">
         <div class="container">
-            <h2 class="section-title">Contact Me </h2>
-            <div class="contact-grid">
-                <div class="contact-form-container glass-card fade-in">
-                    <form class="contact-form">
-                        <input type="text" name="name" placeholder="Name" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <textarea name="message" rows="5" placeholder="Message" required></textarea>
-                        <button type="submit" class="cta-btn primary">Send Message</button>
-                    </form>
+            <div class="section-header">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Education & Achievements</h2>
+            </div>
+            
+            <!-- Education Subsection -->
+            <div class="education-category">
+                <div class="category-header animate-on-scroll">
+                    <div class="category-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="category-title">Academic Background</h3>
+                    <div class="category-line"></div>
                 </div>
-                <div class="social-links glass-card fade-in">
-                    <h3>Connect with me</h3>
-                    <a href="https://github.com/adnan-jahangir" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/adnan-jahangir" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:adnanjahangir2050@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                
+                <div class="timeline education-timeline">
+                    <div class="timeline-item left animate-on-scroll">
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-date">2023 - Running</div>
+                            <h3 class="timeline-title">B.Sc in Computer Science & Engineering</h3>
+                            <h4 class="timeline-subtitle">Data Analytics Enthusiast</h4>
+                            <p class="timeline-institution">
+                                <i class="fas fa-university"></i>
+                                International Islamic University Chittagong
+                            </p>
+                            <!-- <div class="timeline-gpa">
+                                <i class="fas fa-star"></i>
+                                <span>CGPA: 3.50 / 4.00</span>
+                            </div> -->
+                            <p class="timeline-description">
+                                Pursuing a comprehensive program covering algorithms, data structures, 
+                                machine learning, and advanced data analytics.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Software Development</span>
+                                <span>Data Communication</span>
+                                <span>Database Management System</span>
+                                <span>Statistics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right animate-on-scroll">
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <div class="timeline-date">2020 - 2022</div>
+                            <h3 class="timeline-title">Baroiyarhat College</h3>
+                            <h4 class="timeline-subtitle">Science Group</h4>
+                            <p class="timeline-institution">
+                                <i class="fas fa-building"></i>
+                                Baroiyarhat College, Mirshorai, Chittagong
+                            </p>
+                            <div class="timeline-gpa">
+                                <i class="fas fa-star"></i>
+                                <span>GPA: 4.75 / 5.00</span>
+                            </div>
+                            <p class="timeline-description">
+                               <p class="timeline-description">
+    Completed higher secondary education in the Science group while leading event management activities, building strong leadership, coordination.
+</p>
+
+                               </p>
+
+                            <div class="timeline-tags">
+                                <span>Event Management</span>
+                                <span>Coordination</span>
+                                <span>Team Work</span>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements Subsection -->
+            <div class="education-category achievements-category">
+                <div class="category-header animate-on-scroll">
+                    <div class="category-icon achievements-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="category-title">Certifications & Achievements</h3>
+                    <div class="category-line"></div>
+                </div>
+                
+                <div class="timeline achievements-timeline">
+                    <div class="timeline-item left animate-on-scroll">
+                        <div class="timeline-content achievement-card">
+                            <div class="timeline-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="timeline-date">2025</div>
+                            <h3 class="timeline-title">Analytics and Power BI Career Path Certificate</h3>
+                            <h4 class="timeline-subtitle">Professional Certification</h4>
+                            <p class="timeline-institution">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                Interactive Cares
+                            </p>
+                            <p class="timeline-description">
+                                Completed a professional certificate covering data analysis, 
+                                visualization, and SQL using real-world datasets.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Python</span>
+                                <span>SQL</span>
+                                <span>Excel</span>
+                                <span>Statistics</span>
+                                <span>Power BI</span>
+                            </div>
+                            <a href="https://interactivecares.com/certificate/ddce49ae-7401-4cbd-917f-982059dd202f" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Certificate</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right animate-on-scroll">
+                        <div class="timeline-content achievement-card">
+                            <div class="timeline-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                           <div class="timeline-date">2025</div>
+
+<h3 class="timeline-title">
+    I+ Prompt Engineer Level 1™ Certification
+</h3>
+
+<h4 class="timeline-subtitle">
+    Prompt Engineering Certification
+</h4>
+
+<p class="timeline-institution">
+    <i class="fas fa-certificate"></i>
+    Netcom365
+</p>
+
+<p class="timeline-description">
+    Earned Level 1 certification in prompt engineering, focusing on structured prompt design,
+    AI workflow optimization, and practical applications of large language models.
+</p>
+
+<div class="timeline-tags">
+    <span>Prompt Engineering</span>
+    <span>AI Tools</span>
+    <span>LLM Applications</span>
+</div>
+<a href="https://pub-141831e61e69445289222976a15b6fb3.r2.dev/Image_to_url_V2/1754238789253-imagetourl.cloud-1770996270356-4mlzhz.jpg" class="certificate-link" target="_blank" rel="noopener noreferrer">
+    <i class="fas fa-external-link-alt"></i>
+    <span>View Certificate</span>
+</a>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Let's Work Together</h3>
+                    <p>
+                        I'm always open to discussing new projects, creative ideas, 
+                        or opportunities to be part of your vision.
+                    </p>
+                    <div class="contact-cards">
+                        <div class="contact-card email-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Email</h4>
+                                <a href="mailto:adnanjahangir2050@gmail.com">adnanjahangir2050@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-card phone-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Phone</h4>
+                                <a href="tel:+8801766411150">+880 1766-411150</a>
+                                <a href="tel:+880199185125">+880 1991-85125</a>
+                            </div>
+                        </div>
+                        <div class="contact-card location-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Location</h4>
+                                <span>Sitakunda, Chittagong</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/adnan-jahangir-4a7617264/" class="social-link linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/adnan-jahangir" class="social-link github" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.facebook.com/adnanadu231" class="social-link facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.kaggle.com/adnanjahangir" class="social-link kaggle" aria-label="Kaggle" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-kaggle"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form animate-on-scroll" id="contactForm" action="https://formsubmit.co/adnanjahangir2050@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                            <span class="focus-border"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                        <span class="focus-border"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        <span class="focus-border"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-simple">
+                <p>&copy; 2026 Adnan Jahangir. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
