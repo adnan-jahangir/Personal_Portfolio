@@ -3300,13 +3300,15 @@ img {
     
     .timeline-item.left .timeline-icon,
     .timeline-item.right .timeline-icon {
-        left: 5px;
+        left: -65px;
         right: auto;
     }
     
     .timeline-item.left .timeline-institution,
-    .timeline-item.left .timeline-tags {
+    .timeline-item.left .timeline-tags,
+    .timeline-item.left .timeline-gpa {
         justify-content: flex-start;
+        float: none;
     }
     
     .contact-wrapper {
