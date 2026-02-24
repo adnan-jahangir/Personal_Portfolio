@@ -3330,11 +3330,25 @@ img {
 }
 
 @media (max-width: 900px) {
+    :root {
+        --navbar-height: 68px;
+    }
+
     .navbar {
-        top: 12px;
-        width: calc(100% - 24px);
-        border-radius: 20px;
-        height: 56px;
+        top: 0;
+        left: 0;
+        transform: translateY(-20px);
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        height: var(--navbar-height);
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    .navbar.loaded {
+        transform: translateY(0);
     }
     
     .nav-links {
@@ -3436,7 +3450,7 @@ img {
 @media (max-width: 600px) {
     :root {
         --section-padding: 60px;
-        --navbar-height: 70px;
+        --navbar-height: 60px;
     }
     
     html {
