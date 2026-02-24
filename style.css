@@ -209,7 +209,7 @@ img {
 }
 
 .nav-logo {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: 700;
     font-family: 'JetBrains Mono', monospace;
 }
@@ -3368,7 +3368,7 @@ img {
     }
 
     .nav-logo {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .nav-resume-btn span {
@@ -3500,7 +3500,7 @@ img {
     }
 
     .nav-logo {
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
 
     .nav-resume-btn {
